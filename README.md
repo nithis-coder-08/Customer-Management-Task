@@ -31,7 +31,7 @@ A modern, responsive customer management application built with Next.js 15 (App 
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/Customer-management-task.git
+    git clone https://github.com/nithis-coder-08/Customer-Management-task.git
     cd Customer-management-task
     ```
 
