@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Customer Management Dashboard
 
-## Getting Started
+A modern, responsive customer management application built with Next.js 15 (App Router), TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## 🚀 Features
+
+### Completed
+- [x] **Dashboard**: View all customers in a responsive table/card layout.
+- [x] **Customer Details**: Dynamic routing (`/customers/[id]`) to view detailed customer info.
+- [x] **Search & Filtering**: Real-time client-side filtering by name or email with debounced input.
+- [x] **Static Generation**: Utilizing `generateStaticParams` for optimal performance.
+- [x] **Responsive Design**: Mobile-friendly UI with adaptive layouts.
+- [x] **Error Handling**: Custom 404 and Error boundaries.
+
+### Pending / Future
+- [ ] Pagination (currently displays all fetched users).
+- [ ] Authentication / Login.
+- [ ] Create / Edit Customer functionality.
+
+## 🛠️ Technical Decisions
+
+- **Framework**: **Next.js 15 (App Router)** was chosen for its robust server-side rendering capabilities and simplified routing.
+- **Styling**: **Tailwind CSS** with **Shadcn UI** components for a consistent, professional, and accessible design system.
+- **Data Fetching**:
+  - **Server Components**: Used for initial data fetching to reduce client-side JavaScript.
+  - **SSG (`generateStaticParams`)**: Implemented for customer detail pages to ensure fast load times and SEO benefits.
+- **State Management**: **React Hooks (`useState`, `useMemo`)** are sufficient for the current scope (search/filtering), avoiding unnecessary complexity from external libraries like Redux.
+- **Type Safety**: **TypeScript** is strictly enforced to ensure code reliability and better developer experience.
+
+## 📦 Project Setup
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/Customer-management-task.git
+    cd Customer-management-task
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
+
+3.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Open the app:**
+    Navigate to [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 🏗️ Build & Production
+
+To create a production build and start the server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+npm start
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
